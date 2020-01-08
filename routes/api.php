@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::resource('posts', 'PostAPIController');
+
+Route::resource('authors', 'AuthorAPIController');
+
+Route::resource('pelanggans', 'pelangganAPIController');
+
+Route::resource('tokos', 'tokoAPIController');
